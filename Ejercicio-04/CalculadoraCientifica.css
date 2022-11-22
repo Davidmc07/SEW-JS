@@ -1,0 +1,69 @@
+/************
+David Martínez Castañón - UO282048
+Estilo de la calculadora científica
+************/
+
+/*001*/
+main {
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 7fr;
+    background-color: rgb(210, 210, 210);
+    color: rgb(0, 0, 0);
+    width: 30em;
+}
+/*011*/
+form:first-of-type {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+/*011*/
+form:last-of-type {
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+/*022*/
+form:first-of-type > input:nth-child(n+4) {
+    grid-row: 2;
+}
+/*011*/
+input[type="text"] {
+    grid-row: 2;
+    padding-right: 1em;
+    color: rgb(0, 0, 0);
+    background-color: rgb(210, 210, 210);
+    text-align: right;
+    font-size: 1.5em;
+    border: none;
+}
+/*022*/
+form:first-of-type > input[type="button"]{
+    background-color: rgb(210, 210, 210);
+    color: rgb(20, 20, 20);
+}
+/*011*/
+input[type="button"] {
+    margin: 0.1em;
+    background-color: rgb(241, 241, 241);
+    color: rgb(27, 27, 27);
+    border: none;
+    padding: 0.5em;
+    font-size: 1.1em;
+}
+/*011*/
+input[name="number"] {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 1.3em;
+}
+/*001*/
+label {
+    padding: 1em;
+    text-align: center;
+    font-size: 1.1em;
+    grid-row: 1;
+}

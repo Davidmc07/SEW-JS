@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <meta name ="author" content ="David Martínez Castañón" />
+    <meta name ="description" content ="Simulador de la calculadora RPN" />
+    <meta name ="keywords" content ="calculadora,simulador,rpn,reverse,polish,notation" />
+
+    <!--Definición de la ventana gráfica-->
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+
+    <title>Calculadora RPN</title>
+    <!-- link de enlace a la hoja de estilo -->
+    <link rel="stylesheet" type="text/css" href="CalculadoraRPN.css" />
+
+    <script src="CalculadoraRPN.js"></script>
+</head>
+<body>
+    <main>
+            <label for="screen">Calculadora RPN</label>
+            <textarea name="screen" id="screen" readonly></textarea>
+
+            <label for="operand">INPUT: </label>
+            <input type="text" id="operand" readonly />
+
+            <input type="button" value="C" onclick="calc.borrar()" />
+            <input type="button" value="CE" onclick="calc.clearEntry()" />
+            <input type="button" value="HYP" onclick="calc.hyp()"/>
+            <input type="button" value="&uarr;" onclick="calc.shift()" />
+            <input type="button" value="DEG" name="units" onclick="calc.changeUnits()"/>
+            
+            <input type="button" value="&pi;" onclick="calc.pi()" />
+            <input type="button" value="x^y" onclick="calc.power()" />
+            <input type="button" value="sin" name="sin" onclick="calc.sin()" />
+            <input type="button" value="cos" name="cos" onclick="calc.cos()" />
+            <input type="button" value="tan" name="tan" onclick="calc.tan()" />
+
+            <input type="button" value="+/-" onclick="calc.cambioDeSigno()" />
+            <input type="button" value="n!" onclick="calc.factorial()" />
+            <input type="button" value="&#8730;" onclick="calc.raiz()" />
+            <input type="button" value="log" onclick="calc.log()" />
+            <input type="button" value="Exp"  onclick="calc.exp()"/>
+
+            <input type="button" value="7" onclick="calc.digitos(7)" />
+            <input type="button" value="8" onclick="calc.digitos(8)" />
+            <input type="button" value="9" onclick="calc.digitos(9)" />
+            <input type="button" value="x" onclick="calc.multiplicacion()" />
+            <input type="button" value="MC" onclick="calc.mc()" />
+
+            <input type="button" value="4" onclick="calc.digitos(4)" />
+            <input type="button" value="5" onclick="calc.digitos(5)" />
+            <input type="button" value="6" onclick="calc.digitos(6)" />
+            <input type="button" value="&#247;" onclick="calc.division()" />
+            <input type="button" value="MR" onclick="calc.mr()" />
+
+            <input type="button" value="1" onclick="calc.digitos(1)" />
+            <input type="button" value="2" onclick="calc.digitos(2)" />
+            <input type="button" value="3" onclick="calc.digitos(3)" />
+            <input type="button" value="+" onclick="calc.suma()" />
+            <input type="button" value="M+" onclick="calc.mMas()" />
+
+            <input type="button" value="0" onclick="calc.digitos(0)" />
+            <input type="button" value="." onclick="calc.punto()" />
+            <input type="button" value="Ent" onclick="calc.push()" />
+            <input type="button" value="-" onclick="calc.resta()" />
+            <input type="button" value="M-" onclick="calc.mMenos()" /> 
+
+    </main>
+</body>
+</html>
